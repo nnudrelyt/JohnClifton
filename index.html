@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Indiana criminal defense, DUI, and family law attorney. Practicing in Allen County and surrounding counties since 1990. Free initial consultation." />
+  <meta name="theme-color" content="#1c1917" />
+  <title>Law Office of John G. Clifton — Indiana Trial Attorney Since 1990</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       DESIGN TOKENS
+       ============================================================ */
+    :root {
+      /* Subdued modern palette — warm charcoal + muted sage + stone */
+      --ink:        #1c1917;
+      --ink-soft:   #292524;
+      --ink-muted:  #44403c;
+      --text:       #292524;
+      --text-soft:  #57534e;
+      --text-mute:  #78716c;
+
+      --paper:      #fafaf7;
+      --stone:      #f5f1eb;
+      --stone-deep: #e7e3dc;
+      --line:       #d6d3d1;
+      --line-soft:  #e7e5e4;
+
+      --sage:       #5d7a5e;
+      --sage-deep:  #4a6549;
+      --sage-soft:  #e8ede6;
+      --sage-tint:  #f1f4ef;
+
+      --champagne:  #c2b694;
+
+      /* Type */
+      --display: "Source Serif 4", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+      --sans:    "DM Sans", -apple-system, "Helvetica Neue", system-ui, sans-serif;
+
+      /* Layout */
+      --container: 1200px;
+      --gutter:    clamp(20px, 5vw, 48px);
+      --radius:    6px;
+      --radius-lg: 12px;
+
+      /* Motion */
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* ============================================================
+       RESET
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================================
+       TYPOGRAPHY
+       ============================================================ */
+    .display {
+      font-family: var(--display);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      font-variation-settings: "opsz" 60;
+    }
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--champagne);
+    }
+    h1, h2, h3 { margin: 0; }
+
+    /* ============================================================
+       LAYOUT HELPERS
+       ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding-inline: var(--gutter);
+    }
+    .section {
+      padding-block: clamp(64px, 9vw, 120px);
+    }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      padding: 0.95rem 1.6rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius);
+      transition: transform 0.2s var(--ease), background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+      will-change: transform;
+      min-height: 48px;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--sage);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--sage-deep); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--paper);
+      border: 1.5px solid rgba(250, 250, 247, 0.4);
+    }
+    .btn-ghost:hover {
+      border-color: var(--paper);
+      background: rgba(250, 250, 247, 0.06);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+    }
+    .btn-outline-dark:hover { background: var(--ink); color: var(--paper); }
+
+    .btn-paper {
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .btn-paper:hover { background: #fff; }
+
+    /* ============================================================
+       UTILITY BAR
+       ============================================================ */
+    .utility {
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.85rem;
+    }
+    .utility-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 44px;
+      padding-block: 0.4rem;
+    }
+    .utility-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      color: rgba(250, 250, 247, 0.78);
+    }
+    .utility-phone {
+      font-weight: 600;
+      color: var(--paper);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .utility-phone:hover { color: var(--champagne); }
+    .utility-meta { display: none; }
+    @media (min-width: 720px) { .utility-meta { display: inline; } }
+    .utility-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.95rem;
+      background: var(--sage);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: background-color 0.2s var(--ease);
+      white-space: nowrap;
+    }
+    .utility-cta:hover { background: var(--sage-deep); }
+
+    /* ============================================================
+       MAIN NAV
+       ============================================================ */
+    .nav {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line-soft);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(140%) blur(10px);
+      background: rgba(250, 250, 247, 0.92);
+    }
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+    }
+    .brand-name {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+    .brand-tagline {
+      font-size: 0.78rem;
+      color: var(--text-mute);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text);
+      position: relative;
+      padding-block: 0.25rem;
+      transition: color 0.2s var(--ease);
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -2px;
+      height: 1.5px;
+      background: var(--sage);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s var(--ease);
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+    }
+
+    .nav-toggle {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+    }
+    .nav-toggle:hover { background: var(--stone); }
+    @media (min-width: 1024px) { .nav-toggle { display: none; } }
+
+    .nav-toggle svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; stroke-width: 1.8; }
+
+    /* Mobile drawer */
+    .nav-drawer {
+      display: none;
+      border-top: 1px solid var(--line-soft);
+      padding: 0.5rem var(--gutter) 1.25rem;
+      background: var(--paper);
+    }
+    .nav-drawer.open { display: block; }
+    .nav-drawer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.25rem;
+    }
+    .nav-drawer a {
+      display: block;
+      padding: 0.85rem 0.5rem;
+      font-weight: 500;
+      color: var(--text);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .nav-drawer a:hover { color: var(--sage); }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      background: var(--ink);
+      color: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top right, rgba(93, 122, 94, 0.12), transparent 55%),
+        radial-gradient(ellipse at bottom left, rgba(194, 182, 148, 0.05), transparent 55%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      gap: clamp(40px, 6vw, 64px);
+      padding-block: clamp(72px, 12vw, 140px);
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
+      }
+    }
+    .hero-eyebrow {
+      color: var(--champagne);
+      margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      color: var(--paper);
+      margin-bottom: 1.25rem;
+      font-variation-settings: "opsz" 60;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--champagne);
+      font-variation-settings: "opsz" 60;
+    }
+    .hero-lede {
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      line-height: 1.6;
+      color: rgba(250, 250, 247, 0.78);
+      max-width: 36ch;
+      margin: 0 0 2rem;
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem 2rem;
+      align-items: center;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(250, 250, 247, 0.14);
+      font-size: 0.85rem;
+      color: rgba(250, 250, 247, 0.65);
+    }
+    .hero-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hero-stars { color: var(--champagne); letter-spacing: 0.1em; font-size: 0.85rem; }
+
+    .hero-portrait {
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--ink-soft) 0%, var(--ink-muted) 100%);
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(250, 250, 247, 0.08);
+    }
+    .hero-portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(194, 182, 148, 0.08), transparent 50%),
+        repeating-linear-gradient(
+          45deg,
+          transparent 0,
+          transparent 20px,
+          rgba(250, 250, 247, 0.015) 20px,
+          rgba(250, 250, 247, 0.015) 21px
+        );
+    }
+    .hero-portrait-label {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: rgba(250, 250, 247, 0.45);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      padding: 1rem;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       PRACTICE AREAS
+       ============================================================ */
+    .practice {
+      background: var(--stone);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto clamp(40px, 5vw, 64px);
+    }
+    .section-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.85rem;
+    }
+    .section-lede {
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 52ch;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px)  { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--sage);
+      box-shadow: 0 24px 48px -28px rgba(28, 25, 23, 0.18);
+    }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--sage-soft);
+      color: var(--sage-deep);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .card-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+    .card-title {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.45rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+    .card-desc {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .card-link {
+      color: var(--sage-deep);
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.25s var(--ease);
+    }
+    .card-link:hover { gap: 0.65rem; }
+
+    /* ============================================================
+       STATS / WHY
+       ============================================================ */
+    .why { background: var(--paper); }
+    .stats {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 900px) { .stats { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; } }
+
+    .stat {
+      background: var(--stone);
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      border: 1px solid transparent;
+      transition: border-color 0.3s var(--ease);
+    }
+    .stat:hover { border-color: var(--line); }
+    .stat-num {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(2.5rem, 5vw, 3.25rem);
+      line-height: 1;
+      color: var(--sage-deep);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      font-variation-settings: "opsz" 60;
+    }
+    .stat-label {
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+    .stat-detail {
+      font-size: 0.82rem;
+      color: var(--text-mute);
+      line-height: 1.45;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+       ============================================================ */
+    .testimonials {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .testimonials .section-title { color: var(--paper); }
+    .testimonials .section-lede {
+      color: rgba(250, 250, 247, 0.65);
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .testimonials .section-lede .stars { color: var(--champagne); letter-spacing: 0.1em; }
+
+    .reviews {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px)  { .reviews { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
+
+    .review {
+      background: var(--ink-soft);
+      border: 1px solid rgba(250, 250, 247, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .review-stars { color: var(--champagne); letter-spacing: 0.15em; margin-bottom: 1rem; font-size: 0.9rem; }
+    .review-quote {
+      font-family: var(--display);
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: rgba(250, 250, 247, 0.86);
+      margin: 0 0 1.25rem;
+      flex: 1;
+    }
+    .review-author {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(250, 250, 247, 0.7);
+      letter-spacing: 0.02em;
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq { background: var(--paper); }
+    .faq-list {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      gap: 0.75rem;
+    }
+    details.faq-item {
+      background: var(--stone);
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease);
+    }
+    details.faq-item[open] {
+      background: var(--paper);
+      border-color: var(--line);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      position: relative;
+      transition: transform 0.3s var(--ease);
+    }
+    .faq-icon::before, .faq-icon::after {
+      content: "";
+      position: absolute;
+      background: var(--sage-deep);
+      transition: transform 0.3s var(--ease);
+    }
+    .faq-icon::before {
+      top: 50%; left: 0; right: 0; height: 1.5px; transform: translateY(-50%);
+    }
+    .faq-icon::after {
+      left: 50%; top: 0; bottom: 0; width: 1.5px; transform: translateX(-50%);
+    }
+    details[open] .faq-icon::after { transform: translateX(-50%) scaleY(0); }
+    .faq-body {
+      padding: 0 1.5rem 1.5rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+
+    /* ============================================================
+       FINAL CTA
+       ============================================================ */
+    .final-cta {
+      background: var(--sage);
+      color: #fff;
+      text-align: center;
+    }
+    .final-cta-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .final-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+      color: #fff;
+    }
+    .final-lede {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+    }
+    .final-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: var(--ink);
+      color: rgba(250, 250, 247, 0.65);
+      font-size: 0.88rem;
+      padding-block: 2rem;
+    }
+    .footer-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    @media (min-width: 720px) {
+      .footer-row { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: center;
+    }
+    .footer-meta span { color: rgba(250, 250, 247, 0.35); }
+    .footer-disclaimer {
+      max-width: 640px;
+      font-size: 0.78rem;
+      color: rgba(250, 250, 247, 0.45);
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(250, 250, 247, 0.08);
+      line-height: 1.55;
+    }
+
+    /* ============================================================
+       SCROLL REVEAL (subtle)
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* Focus styles */
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--sage);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ UTILITY BAR ============ -->
+  <div class="utility">
+    <div class="container utility-row">
+      <div class="utility-info">
+        <a class="utility-phone" href="tel:+12603875796" aria-label="Call (260) 387-5796">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (260) 387-5796
+        </a>
+        <span class="utility-meta">Free Consultation · Available After Hours for Urgent Matters</span>
+      </div>
+      <a href="#contact" class="utility-cta">Schedule Now <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <!-- ============ MAIN NAV ============ -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-row">
+      <a href="#" class="brand" aria-label="Law Office of John G. Clifton, home">
+        <span class="brand-mark">JGC</span>
+        <span>
+          <span class="brand-name">Law Office of John G. Clifton</span><br>
+          <span class="brand-tagline">Indiana Trial Attorney · Since 1990</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#criminal">Criminal Defense</a></li>
+        <li><a href="#family">Family Law</a></li>
+        <li><a href="#dui">DUI &amp; Traffic</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+    <div class="nav-drawer" id="mobile-nav" hidden>
+      <ul role="list">
+        <li><a href="#criminal">Criminal Defense</a></li>
+        <li><a href="#family">Family Law</a></li>
+        <li><a href="#dui">DUI &amp; Traffic</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow hero-eyebrow">35+ Years · Indiana Trial Experience</p>
+        <h1 class="hero-title">
+          Indiana's trusted counsel <em>since 1990.</em>
+        </h1>
+        <p class="hero-lede">
+          Steady, thorough representation in criminal defense, DUI, and family law &mdash; across Allen County and Northeast Indiana.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Free Consultation <span aria-hidden="true">→</span></a>
+          <a href="tel:+12603875796" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (260) 387-5796
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><span class="hero-stars">★★★★★</span> Google Reviews</span>
+          <span class="hero-trust-item">Indiana Bar Association</span>
+          <span class="hero-trust-item">Allen County Bar</span>
+        </div>
+      </div>
+      <div class="hero-portrait reveal" aria-hidden="true">
+        <div class="hero-portrait-label">[ Professional photo of<br>Attorney John Clifton ]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE AREAS ============ -->
+  <section class="section practice" id="practice">
+    <div class="container">
+      <header class="section-header reveal">
+        <h2 class="section-title">How We Can Help</h2>
+        <p class="section-lede">Three focused practice areas. Decades of trial experience in Indiana courtrooms.</p>
+      </header>
+      <div class="cards">
+        <article class="card reveal" id="criminal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M5 8l-2 6a4 4 0 0 0 8 0L9 8"/><path d="M19 8l-2 6a4 4 0 0 0 8 0L23 8"/></svg>
+          </div>
+          <h3 class="card-title">Criminal Defense</h3>
+          <p class="card-desc">Felonies and misdemeanors, drug offenses, expungement, probation violations, and post-conviction relief.</p>
+          <a href="#" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal" id="family">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="2.5"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M14 21v-2a4 4 0 0 1 3-3.87"/></svg>
+          </div>
+          <h3 class="card-title">Family &amp; Divorce</h3>
+          <p class="card-desc">Divorce, custody, child support, adoption, paternity, protection orders, and grandparent rights.</p>
+          <a href="#" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal" id="dui">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 17h14"/><path d="M5 17l2-7a2 2 0 0 1 2-1.5h6a2 2 0 0 1 2 1.5l2 7"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/></svg>
+          </div>
+          <h3 class="card-title">DUI &amp; Traffic</h3>
+          <p class="card-desc">OWI defense, suspended licenses, CDL violations, habitual traffic violator, and Specialized Driving Privileges.</p>
+          <a href="#" class="card-link">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="section why" id="about">
+    <div class="container">
+      <header class="section-header reveal">
+        <h2 class="section-title">Why Clients Choose John</h2>
+        <p class="section-lede">A solo practice focused on direct, attentive representation &mdash; not a marketing-driven firm where your case gets handed off.</p>
+      </header>
+      <div class="stats">
+        <div class="stat reveal">
+          <div class="stat-num">35+</div>
+          <div class="stat-label">Years Practicing</div>
+          <div class="stat-detail">Indiana courtrooms since 1990</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Counties Served</div>
+          <div class="stat-detail">Allen, Whitley, DeKalb &amp; more</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">$0</div>
+          <div class="stat-label">Initial Consultation</div>
+          <div class="stat-detail">Always free, no obligation</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">1:1</div>
+          <div class="stat-label">Personal Attention</div>
+          <div class="stat-detail">You work with John, not an associate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="container">
+      <header class="section-header reveal">
+        <h2 class="section-title">What Clients Say</h2>
+        <p class="section-lede"><span class="stars">★★★★★</span> Verified Google Reviews</p>
+      </header>
+      <div class="reviews">
+        <article class="review reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">[Placeholder for a verified client testimonial. Pull live reviews from Google Business Profile or Avvo so the feed updates automatically.]</p>
+          <div class="review-author">— Client Name, Fort Wayne</div>
+        </article>
+        <article class="review reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">[Second testimonial placeholder &mdash; ideally one criminal-defense and one family-law review to balance the audience signal.]</p>
+          <div class="review-author">— Client Name, Allen County</div>
+        </article>
+        <article class="review reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">[Third testimonial. Embed a Google Reviews widget so this section refreshes without manual updates.]</p>
+          <div class="review-author">— Client Name, Whitley County</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <header class="section-header reveal">
+        <h2 class="section-title">Common Questions</h2>
+        <p class="section-lede">Straight answers to the questions clients most often bring to a first consultation.</p>
+      </header>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>What should I do immediately after being arrested in Indiana?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Stay calm, exercise your right to remain silent, and politely ask for an attorney. Do not discuss the facts of your case with police, cellmates, or family members on recorded jail phone lines. Call our office as soon as possible &mdash; we offer after-hours response for urgent criminal matters.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>How long does an uncontested divorce take in Indiana?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Indiana imposes a statutory 60-day waiting period between filing and finalization. Truly uncontested cases &mdash; where both spouses agree on property, support, and parenting &mdash; can finalize close to that minimum. Cases with disputed issues typically take longer.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>Can I get my Indiana criminal record expunged?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Many Indiana convictions are eligible for expungement after a waiting period (typically five to eight years for misdemeanors and Level 6 felonies, longer for more serious offenses). Eligibility depends on the specific offense, your record since, and whether you meet statutory requirements. We can assess eligibility during a free consultation.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>What does a DUI/OWI cost in Indiana?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-body">
+            <p>Beyond legal fees, a first OWI conviction in Indiana commonly involves court costs, fines, license suspension, increased insurance, possible ignition interlock, and required programs &mdash; often $5,000 to $10,000+ in total impact. Outcomes vary widely based on the facts, prior history, and how the case is handled, which is why early counsel matters.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section final-cta" id="contact">
+    <div class="container final-cta-inner reveal">
+      <h2 class="final-title">Have a question? Start with a free conversation.</h2>
+      <p class="final-lede">No pressure, no obligation. After-hours appointments available for urgent matters.</p>
+      <div class="final-actions">
+        <a href="#" class="btn btn-paper">Schedule Online <span aria-hidden="true">→</span></a>
+        <a href="tel:+12603875796" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (260) 387-5796
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>Law Office of John G. Clifton</div>
+        <div class="footer-meta">
+          <span>·</span>
+          Lincoln Tower, Suite 610, Fort Wayne, IN 46802
+          <span>·</span>
+          <a href="mailto:contact@johngcliftonlaw.com">contact@johngcliftonlaw.com</a>
+        </div>
+      </div>
+      <p class="footer-disclaimer">
+        Attorney advertising. The information on this website is for general informational purposes only and is not legal advice. Visiting this site or contacting our office does not create an attorney-client relationship. Past results do not guarantee future outcomes. © 2026 Law Office of John G. Clifton. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var btn = document.getElementById('navToggle');
+      var drawer = document.getElementById('mobile-nav');
+      if (!btn || !drawer) return;
+      btn.addEventListener('click', function () {
+        var isOpen = drawer.classList.toggle('open');
+        drawer.hidden = !isOpen;
+        btn.setAttribute('aria-expanded', String(isOpen));
+        btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
+      // Close drawer on link tap
+      drawer.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          drawer.classList.remove('open');
+          drawer.hidden = true;
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        });
+      });
+    })();
+
+    // Scroll reveal — IntersectionObserver, no library
+    (function () {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
